@@ -38,12 +38,19 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: '/icon-512.png',
-        width: 512,
-        height: 512,
-        alt: 'DrLambda.ai - ChatSlide',
+        url: 'https://cdn.prod.website-files.com/67803b88fec21161e40c99cc/67803ec6ea34687115ea53cf_OG%20image.png',
+        width: 1200,
+        height: 630,
+        alt: 'ChatSlide - DrLambda Inc Flagship Product',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@ChatSlideAI',
+    title: "DrLambda.ai - AI-Powered Platform",
+    description: "AI-powered platform for intelligent automation and insights",
+    images: ['https://cdn.prod.website-files.com/67803b88fec21161e40c99cc/67803ec6ea34687115ea53cf_OG%20image.png'],
   },
   robots: {
     index: true,
