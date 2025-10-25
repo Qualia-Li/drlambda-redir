@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   description: "AI-powered platform for intelligent automation and insights",
   manifest: "/manifest.json",
   metadataBase: new URL("https://drlambda.ai"),
+  alternates: {
+    canonical: "https://www.drlambda.ai",
+  },
   openGraph: {
     title: "DrLambda.ai - AI-Powered Platform",
     description: "AI-powered platform for intelligent automation and insights",

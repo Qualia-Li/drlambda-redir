@@ -1,13 +1,27 @@
-import Image from "next/image";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://www.drlambda.ai",
-  },
-};
+import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 
 export default function Home() {
+  const searchParams = useSearchParams();
+
+  // Build ChatSlide URL with UTM parameters
+  const getChatSlideUrl = () => {
+    const params = new URLSearchParams();
+
+    // Copy all UTM parameters and referral info from current URL
+    searchParams.forEach((value, key) => {
+      if (key.startsWith('utm_') || key === 'ref' || key === 'referrer') {
+        params.append(key, value);
+      }
+    });
+
+    const queryString = params.toString();
+    return queryString
+      ? `https://chatslide.ai?${queryString}`
+      : 'https://chatslide.ai';
+  };
   return (
     <div className="relative min-h-screen overflow-hidden bg-gray-50">
       {/* Floating Background Images */}
@@ -91,7 +105,7 @@ export default function Home() {
           {/* CTA Button */}
           <div className="mb-12 sm:mb-16 animate-fade-in-up-delay">
             <a
-              href="https://chatslide.ai"
+              href={getChatSlideUrl()}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 sm:px-10 py-4 sm:py-5 bg-[#7b3aed] text-white text-lg sm:text-xl font-bold rounded-full hover:bg-[#6929d4] hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-lg"
@@ -115,37 +129,178 @@ export default function Home() {
         </main>
       </div>
 
-      {/* More Resources Section */}
-      <div className="relative z-10 bg-white border-t border-gray-200 py-12 sm:py-16">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
-            More Resources
-          </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="https://quanlai.li"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-gray-50 text-gray-900 rounded-lg hover:bg-gray-100 transition-all duration-200 border border-gray-300 shadow-sm"
-            >
-              <span className="font-medium">quanlai.li</span>
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-            </a>
+      {/* Footer */}
+      <footer className="relative z-10 border-t bg-background">
+        <div className="container mx-auto px-6 py-12 md:py-16">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+            {/* Brand */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-semibold">DrLambda.ai</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                AI-powered platform for intelligent automation and insights.
+              </p>
+            </div>
+
+            {/* Links */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-semibold">Links</h4>
+              <ul className="space-y-2.5">
+                <li>
+                  <a
+                    href="https://chatslide.ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    ChatSlide.ai
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.chatslide.ai/about"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.chatslide.ai/terms"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Terms
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://gptslides.net"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    GPTSlides.net
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://quanl.ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Quanl.ai
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Press Coverage */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-semibold">Press Coverage</h4>
+              <ul className="space-y-2.5">
+                <li>
+                  <a
+                    href="https://www.stanfordtechreview.com/articles/how-stanford-alum-empowers-indian-educators-with-chatslide"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Stanford Tech Review
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.sfbayareatimes.com/posts/empowering-indian-music-tutors-through-ai-the-chatslide-story"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    SF Bay Area Times
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.montrealtimes.ca/posts/from-indias-classrooms-to-montreals-innovation-hubs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Montreal Times
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://techbullion.com/quanlai-li-launches-how-to-win-geo-a-groundbreaking-guide-to-generative-engine-optimization/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    TechBullion
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Reviews */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-semibold">Reviews</h4>
+              <ul className="space-y-2.5">
+                <li>
+                  <a
+                    href="https://www.aitoolssme.com/blogs/ai-slide-maker-chatslide-honest-review-and-deep-dive"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    AI Tools SME
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.chatslide.ai/pages/best-slides-tool-2025"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Best Slides Tool 2025
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://metapress.com/chatslide-ai-how-innovation-empowers-global-educators-and-professionals/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    MetaPress
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.producthunt.com/products/chatslide-ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Product Hunt
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="mt-12 border-t pt-8">
+            <p className="text-center text-sm text-muted-foreground">
+              &copy; {new Date().getFullYear()} DrLambda.ai. All rights reserved.
+            </p>
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   );
 }
