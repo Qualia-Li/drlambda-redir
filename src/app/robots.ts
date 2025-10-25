@@ -2,13 +2,10 @@ import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/api/', '/private/'],
-      },
-    ],
-    sitemap: 'https://drlambda.ai/sitemap.xml',
+    rules: {
+      userAgent: '*',
+      allow: '/',
+    },
+    sitemap: 'https://www.drlambda.ai/sitemap.xml',
   }
 }
