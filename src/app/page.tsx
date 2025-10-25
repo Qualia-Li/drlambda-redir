@@ -89,6 +89,9 @@ export default function Home() {
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 tracking-tight">
               Looking for <span className="text-[#7b3aed]">ChatSlide</span>?
             </h1>
+            <p className="text-base sm:text-lg text-gray-700 mb-3">
+              ChatSlide is DrLambda Inc&apos;s flagship product
+            </p>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-900 max-w-3xl mx-auto leading-relaxed mb-6">
               🥇 Best AI Slides Tool
             </p>

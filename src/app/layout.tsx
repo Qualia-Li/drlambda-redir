@@ -16,14 +16,18 @@ export const metadata: Metadata = {
   title: "DrLambda.ai - AI-Powered Platform",
   description: "AI-powered platform for intelligent automation and insights",
   manifest: "/manifest.json",
-  metadataBase: new URL("https://drlambda.ai"),
+  metadataBase: new URL("https://www.drlambda.ai"),
   alternates: {
     canonical: "https://www.drlambda.ai",
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     title: "DrLambda.ai - AI-Powered Platform",
     description: "AI-powered platform for intelligent automation and insights",
-    url: "https://drlambda.ai",
+    url: "https://www.drlambda.ai",
     siteName: "DrLambda.ai",
     locale: "en_US",
     type: "website",

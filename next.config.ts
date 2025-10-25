@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Redirect removed - now showing a landing page instead
+  async redirects() {
+    return [
+      {
+        source: '/about',
+        destination: 'https://chatslide.ai/about',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
