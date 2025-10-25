@@ -1,0 +1,28 @@
+# DrLambda.ai
+
+> AI-powered platform
+
+## About
+
+DrLambda.ai is an AI-powered platform designed to help users with intelligent automation and insights.
+
+## Contact
+
+- Website: https://drlambda.ai
+- Email: contact@drlambda.ai
+
+## Key Pages
+
+- Home: https://drlambda.ai
+- About: https://drlambda.ai/about
+- Blog: https://drlambda.ai/blog
+
+## Technologies
+
+- Framework: Next.js 15
+- UI: React 19
+- Styling: Tailwind CSS 4
+
+## Last Updated
+
+2025-03-17

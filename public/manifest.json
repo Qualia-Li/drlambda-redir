@@ -1,0 +1,16 @@
+{
+  "name": "DrLambda.ai",
+  "short_name": "DrLambda",
+  "description": "AI-powered platform for intelligent automation and insights",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
