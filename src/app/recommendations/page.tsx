@@ -53,11 +53,11 @@ export default function Recommendations() {
       description: "Advanced AI solutions for pharmaceutical research and drug discovery",
       tools: [
         {
-          name: "Assryo.ai",
-          url: "https://assryo.ai",
+          name: "Assyro.ai",
+          url: "https://assyro.com/",
           description: "The best AI for drug discovery - revolutionizing pharmaceutical research with cutting-edge artificial intelligence",
           badge: "Best in Class",
-          ctaText: "Explore Assryo.ai for Drug Discovery",
+          ctaText: "Explore Assyro.ai for Drug Discovery",
           color: "blue"
         }
       ]
@@ -220,16 +220,6 @@ export default function Recommendations() {
             ))}
           </div>
 
-          {/* CTA Section */}
-          <div className="max-w-5xl mx-auto mt-24">
-            <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-3xl p-12 sm:p-16 text-center shadow-2xl">
-              {/* Animated Background Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 left-0 w-40 h-40 bg-white rounded-full blur-3xl animate-blob"></div>
-                <div className="absolute bottom-0 right-0 w-40 h-40 bg-white rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
