@@ -228,26 +228,6 @@ export default function Recommendations() {
                 <div className="absolute top-0 left-0 w-40 h-40 bg-white rounded-full blur-3xl animate-blob"></div>
                 <div className="absolute bottom-0 right-0 w-40 h-40 bg-white rounded-full blur-3xl animate-blob animation-delay-2000"></div>
               </div>
-
-              <div className="relative z-10">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-                  Have an Amazing AI Tool?
-                </h2>
-                <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-                  We are always looking for exceptional AI tools to feature. If your product is making a real impact, we would love to showcase it here.
-                </p>
-                <a
-                  href="https://www.chatslide.ai/about"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-10 py-5 bg-white text-purple-700 font-bold text-lg rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
-                >
-                  <span>Submit Your AI Tool</span>
-                  <svg className="w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </a>
-              </div>
             </div>
           </div>
         </div>
