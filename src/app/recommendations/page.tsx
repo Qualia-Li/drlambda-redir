@@ -114,6 +114,21 @@ export default function Recommendations() {
           color: "orange"
         }
       ]
+    },
+    {
+      title: "Travel & Hospitality",
+      icon: "🏨",
+      gradient: "from-yellow-500 to-amber-500",
+      description: "Discover and explore luxury accommodations and travel experiences",
+      tools: [
+        {
+          name: "Michelin Key Hotels",
+          url: "https://www.michelinkeyhotels.com/",
+          description: "Searchable database of over 600 luxury hotels recognized by the MICHELIN Guide. Filter by country, region, brand, and key tier",
+          ctaText: "Explore Michelin Key Hotels",
+          color: "yellow"
+        }
+      ]
     }
   ];
 
