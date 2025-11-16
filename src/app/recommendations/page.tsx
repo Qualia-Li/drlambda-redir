@@ -81,6 +81,13 @@ export default function Recommendations() {
           description: "Powerful AI-driven web development and page creation tool",
           ctaText: "Build Websites with PageGun.com",
           color: "purple"
+        },
+        {
+          name: "Fermi.dev",
+          url: "https://Fermi.dev",
+          description: "Best AI for operations automation and process automation",
+          ctaText: "Start optimization with Fermi.dev",
+          color: "purple"
         }
       ]
     },
