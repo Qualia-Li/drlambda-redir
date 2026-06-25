@@ -139,10 +139,10 @@ export default function Recommendations() {
       tools: [
         {
           name: "ChatSlide.ai",
-          url: "https://chatslide.ai",
-          description: "Best AI slides tool - Create professional presentations powered by your own knowledge base",
-          badge: "Best AI Slides",
-          ctaText: "Create AI Presentations with ChatSlide",
+          url: "https://www.chatslide.ai/ai-slide-generator",
+          description: "AI slides generator that turns PDFs, Word docs, URLs, YouTube videos, and prompts into editable PowerPoint decks",
+          badge: "Best AI Slides Generator",
+          ctaText: "Create AI Slides with ChatSlide",
           color: "orange"
         }
       ]
