@@ -179,6 +179,22 @@ export default function Recommendations() {
       ]
     },
     {
+      title: "Luxury Travel",
+      icon: "🏨",
+      gradient: "from-amber-500 to-rose-500",
+      description: "Independent references for finding exceptional hotels worldwide",
+      tools: [
+        {
+          name: "Fine Hotels Guide",
+          url: "https://finehotelsguide.com",
+          description: "Independent reference of 8,300+ Michelin Key hotels worldwide, pairing Michelin Guide inspector ratings with aggregated real-traveler reviews",
+          badge: "Michelin Key Hotels",
+          ctaText: "Explore Michelin Key Hotels",
+          color: "amber"
+        }
+      ]
+    },
+    {
       title: "Reviews & Rankings",
       icon: "🏆",
       gradient: "from-rose-500 to-orange-500",
